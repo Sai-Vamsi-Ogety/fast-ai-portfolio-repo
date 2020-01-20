@@ -6,9 +6,8 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: Titke test!
-description: This is where I blog about stuff that I learn everyday, Also to oganize my academic and side projects. This will also
-serve as my portfolio for applying to jobs.
+title: Title test!
+description: This is where I blog about stuff that I learn everyday, Also to oganize my academic and side projects. This will also serve as my portfolio for applying to jobs.
 github_username: Sai-Vamsi-Ogety
 
 # Email and twitter are optional:
