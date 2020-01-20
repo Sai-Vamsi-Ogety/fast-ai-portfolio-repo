@@ -11,8 +11,8 @@ description: This is where I blog about stuff that I learn everyday, Also to oga
 github_username: Sai-Vamsi-Ogety
 
 # Email and twitter are optional:
-email:ogetyvamsi@gmail.com
-twitter_username:@SaiOgety 
+email: ogetyvamsi@gmail.com
+twitter_username: @SaiOgety 
 
 # Set this to true to get LaTeX math equation support
 use_math: 
