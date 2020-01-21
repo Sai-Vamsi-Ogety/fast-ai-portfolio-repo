@@ -1,3 +1,10 @@
+
+# Architecture of the system
+![](/images/mini_project.PNG "Architecture")
+
+
+
+
 ```python
 import urllib.request, urllib.parse, urllib.error
 import json
