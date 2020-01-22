@@ -1,9 +1,30 @@
-
-# Architecture of the system
+# Movies and Lyrics Project
+- Introduction:
+    - This  project scrapes information about movies and lyrics from the web and store them into your local database(SQLite)
+    - Several features includes: 
+      1. search for the movie.
+      2. search for the lyrics.
+      1. saving the lyrics to the text file
+      2. Saving the database into excel sheet.
+      3. saving the poster of your movie.
+      4. print the contents of your database.
+    - The skills that are required for this project are:
+        1. python
+        2. communicating with the web services using API calls
+        3. creating and maintaining your database(SQLite)
+        4. Handling JSON objects
+        5. SQL
+        6. Motivation :)
+        
+# The Flow Diagram of the system
 ![](/images/mini_project.PNG "Architecture")
 
 
 
+## The Required modules
+- urllib is the gateway from Python to web is done through urllib module. It is a Python module for fetching URLs (Uniform Resource Locators).
+- json module allows us to handle JSON Objects.
+-  re module is used for extracting data of certain pattern
 
 ```python
 import urllib.request, urllib.parse, urllib.error
@@ -224,6 +245,10 @@ def search_movie(title):
 ```
 
 ### Let's Search for a movie called The Prestige
+ - pass the movie name to the search_movie function.
+ - It searches for the information about movie and extracts it from the web.
+ - It gives you an option whether to save the movie poster or not 
+ - It also asks you whether to save this movie info into the local database. If you asked it to save, the save_database() function is called and it check whether the database already has information on this movie or not. If it has, then it will not write into database else it adds a row to the database.
 
 
 ```python
@@ -269,7 +294,7 @@ Image("Posters/The_Prestige.jpg")
 
 
 
-![jpeg](output_13_0.jpg)
+![]("/images/The_Prestige.jpg" The Prestige movie poster)
 
 
 
@@ -286,6 +311,7 @@ def clean_lyrics(bad_lyrics):
 
 
 ```python
+
 def search_lyrics(artist,song_name):
     
     service_url_lyrics = "https://api.lyrics.ovh/v1"
@@ -316,6 +342,10 @@ def search_lyrics(artist,song_name):
     
 ```
 
+### Let's search for some lyrics
+- pass the name of the artist and name of the song to search.
+- search_lyrics() function finds the lyrics online and retrieves it.
+- It gives you an option whther to save these lyrics into your local database or not and If you said yes it adds a row into your database if it doesn't have that information.
 
 ```python
 search_lyrics("coldplay","Clocks")
@@ -418,7 +448,8 @@ save_in_text("Clocks","LyricsInfo")
     Song: Clocks lyrics saved to a text file
 
 
-
-```python
-
-```
+### Summary
+- My weekend was fun and productive because of this project(Movies and Lyrics).
+- Some of the challenges even though they are trivial which annoyed me much are environment issues. I was using mini conda for developing the code and even though I have installed required modules in my local environment I was getting no Module Found Error. This issue was resolved by creating a separate enviroment for this project (credits to stackoverflow).
+- I learned how to play with JSON objects.
+- My SQL query writing also got refreshed. 
