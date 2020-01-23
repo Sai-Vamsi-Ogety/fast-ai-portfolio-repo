@@ -3,10 +3,10 @@
 ## Introduction 
 This isolated camera zoom follows one or more players and/or coaches in the frame and ends as soon as there is a camera change.The following figures are examples when there was an Isolated zoom action.
 
-![](/images/action_1.jpg "Figure_1")
+![](/images/action_1.JPG "Figure_1")
 
 
-![](/images/action_2.jpg "Figure_2")
+![](/images/action_2.JPG "Figure_2")
 
 The motivation is to improve sports Analytics through Computer Vision and improve sports coverage which helps in better customer engagement.
 
@@ -23,7 +23,7 @@ Built a full-scale CNN model and deployed it on the cloud and achieved test accu
 ## What I learnt ?
 Usage of AWS SageMaker for training and deploying our Machine Learning models and to do transfer learning using a pre-trained model.
 
-![](/images/action_3.jpg "Figure_3")
+![](/images/action_3.JPG "Figure_3")
 
 
 ## Future Scope
