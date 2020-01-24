@@ -32,13 +32,12 @@ The main aim of developing a denoising autoencoder (Fig1) is to make it learn ro
 
 ![](/images/Fig1.png )
 
-
-  Fig. 1. Denoising Autoencoder
+Fig. 1. Denoising Autoencoder
 
 The parameters of this model are then trained to minimize the average loss using varying learning rates and the cost of which is calculated using the squared error function-
 
  
-![](/images/Fig2.png )
+![](/images/Fig5.png )
 
 Fig. 2. Noisy input vector x being reconstructed back to original x
 
@@ -53,8 +52,10 @@ Fig. 3. Layer one Training             |  Fig. 4. Layer two Training
 ![](/images/Fig3.png )  |  ![](/images/Fig4.png )
 
 
-![](/images/Fig5.png )
+![](/images/Fig2.png )
+
 Fig. 5. Softmax classifier
+
 We first train our model with a large dataset to get the best possible parameters. Then, we freeze these parameters and only train the softmax layer with 1-labeled sample per class and 5-labeled samples per class.
 
 ## 4. Experiments
@@ -69,16 +70,22 @@ For the **denoising autoencoders** , we have performed the following experiments
 3. Varying the noise levels
 #### 1. Varying learning rate vs cost
 The main goal of this experiment is to find the best learning rate for our model.  For this experiment, we have taken 5000 training samples from the Fashion Mnist dataset. Using a random generator function we have added 20%  noise to the input images. Instead of performing the experiment till convergence, we stopped the gradient descent after 500 iterations. We varied the learning rate from 0.1 to 0.5 and the cost of the training samples after 500 iterations was reported. From Fig 6, we can see that for different variations of hidden layer nodes, the cost was minimum at learning rate 0.1. So for the next experiments we have fixed the learning rate as 0.1.
-![](/images/Fig3.png )
+
+![](/images/Fig6.png )
+
  Fig.6. Cost vs Learning Rate plot
 
 #### 2. Varying number of hidden layer nodes vs cost
 
 The main goal of this experiment is to find the number of hidden layer nodes for better reconstruction of noisy images.  For this experiment, we have taken 5000 training samples from the Fashion Mnist dataset. Using a random generator function we have added 20% noise to the input images. Instead of performing the experiment until the convergence, we stopped the gradient descent after 500 iterations.
+
 ![](/images/Fig7.png )
+
 Fig. 7. Plot of Cost vs Hidden Nodes
 From the previous experiment’s results, we took the learning rate as 0.1. From Fig 7, we can observe that the cost of our model after 500 iterations is minimum when the number of hidden layer nodes is 1000. So, for the next experiments, we have fixed hidden layer nodes as 1000. Reconstructed images with learning rate 0.1 and hidden layer nodes 1000 is shown in the Fig8.
+
 ![](/images/Fig8.png )
+
 Fig.8 a) Row 1 and Row 3 are the raw images; b) Row 2 and Row 4 are the images with 20% noise; c) Row 3 and Row 6 are the reconstructed images with Learning rate = 0.1 and number of hidden layer nodes = 1000.
 
 #### 3. Varying the noise levels
@@ -96,12 +103,15 @@ images with different noise values varying from 20% to 70% (Fig 9,10,11)
 For this experiment, we have taken 5000 training samples from the Fashion Mnist dataset. Keeping the other parameters the same, we used random generator function and added 70% noise to input images. Instead of performing the experiment till convergence, we have stopped gradient descent after 500 iterations. From the previous experiment results, we have taken learning rate as 0.1 and hidden layer nodes as 100. Then we have tested our model with training images with different training noises varying from 20 to 70.
 
 ![](/images/Fig9.png )
+
  Fig. 9. Test images with 20% noise on a network trained with 20% noise
 
 ![](/images/Fig10.png )
+
 Fig. 10. Test images with 50% noise on a network trained with 20% noise
 
 ![](/images/Fig11.png )
+
 Fig.11. Test images with 70% noise on a network trained with 20% noise
 
 
@@ -120,13 +130,16 @@ The main goal of this experiment is to find the best learning rate for our model
 From the accuracies of Table 1, we can say that for learning rate 0.1 gives best accuracies for our model.
 
 ![](/images/Fig12.png)
+
 Fig.12 Test images with 20 % noise on a network trained with 70% noise
 
 ![](/images/Fig13.png)
+
 Fig.13 Test images with 50% noise on a network trained with 70% noise
 
 
 ![](/images/Fig14.png)
+
 Fig.14 Test images with 70% noise on a network trained with 70% noise
 
 
